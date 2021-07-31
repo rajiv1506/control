@@ -1,3 +1,1 @@
-profile::install::dbname: 'mydatabase'
-profile::install::user: 'test123'
-profile::install::password: 'test123'
+

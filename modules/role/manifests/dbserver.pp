@@ -1,3 +1,3 @@
 class role::dbserver{
-  include profile::install
+  include profile::mediawiki::db
 }

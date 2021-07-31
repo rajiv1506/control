@@ -1,0 +1,13 @@
+profile::mediawiki::db::dbname: 'my_wiki'
+profile::mediawiki::db::user: 'new_mysql_user'
+profile::mediawiki::db::password: 'THISpasswordSHOULDbeCHANGED'
+profile::mediawiki::db::grant:
+  - 'ALL'
+profile::mediawiki::app::packagelist:
+  - 'php'
+  - 'php-mysql'
+  - 'libapache2-mod-php'
+  - 'php-xml'
+  - 'php-mbstring'
+  - 'php-intl'
+profile::mediawiki::web::package: apache2

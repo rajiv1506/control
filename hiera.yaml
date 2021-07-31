@@ -7,10 +7,10 @@ defaults:
 
 hierarchy:
   - name: "Per-node data"
-    path: "%{facts.environment}/nodes/%{facts.hostname}.yaml"
+    path: "production/nodes/%{facts.hostname}.yaml"
 
   - name: "Per-environment defaults"
-    path: "%{facts.environment}/default.yaml"
+    path: "production/default.yaml"
 
   - name: "Common data"
     path: "common.yaml"
