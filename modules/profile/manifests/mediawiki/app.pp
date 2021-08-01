@@ -4,6 +4,7 @@ class profile::mediawiki::app(
   $packagelist.each | $package | {
   package{$package:
     ensure => installed,
+    allow_virtual => true,
     }
   }
 }

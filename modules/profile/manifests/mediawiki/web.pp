@@ -3,5 +3,6 @@ class profile::mediawiki::web(
 ){
   package{$package:
     ensure => installed,
+    allow_virtual => true,
   }
 }
