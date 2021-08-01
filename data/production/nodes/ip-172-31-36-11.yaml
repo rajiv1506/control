@@ -15,6 +15,7 @@ profile::mediawiki::executable::command:
   - 'wget https://releases.wikimedia.org/mediawiki/1.31/mediawiki-1.31.1.tar.gz'
   - 'sudo tar -xvzf mediawiki-*.tar.gz'
   - 'sudo mkdir /var/lib/mediawiki'
+  - 'sudo ln -s /var/lib/mediawiki /var/www/html/wiki'
   - 'sudo rm "/etc/apache2/mods-enabled/dir.conf"'
   - 'sudo touch /etc/apache2/mods-enabled/dir.conf'
   - 'echo "<IfModule mod_dir.c>"  | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
