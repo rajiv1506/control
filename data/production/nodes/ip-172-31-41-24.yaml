@@ -1,0 +1,26 @@
+profile::mediawiki::db::dbname: 'my_wiki'
+profile::mediawiki::db::user: 'new_mysql_user'
+profile::mediawiki::db::password: 'THISpasswordSHOULDbeCHANGED'
+profile::mediawiki::db::grant:
+  - 'ALL'
+profile::mediawiki::app::packagelist:
+  - 'php'
+  - 'php-mysql'
+  - 'libapache2-mod-php'
+  - 'php-xml'
+  - 'php-mbstring'
+  - 'php-intl'
+profile::mediawiki::web::package: apache2
+profile::mediawiki::executable::command:
+  - 'wget https://releases.wikimedia.org/mediawiki/1.31/mediawiki-1.31.1.tar.gz'
+  - 'sudo tar -xvzf mediawiki-*.tar.gz'
+  - 'sudo mkdir /var/lib/mediawiki'
+  - 'sudo ln -s /var/lib/mediawiki /var/www/html/wiki'
+  - 'sudo rm "/etc/apache2/mods-enabled/dir.conf"'
+  - 'sudo touch /etc/apache2/mods-enabled/dir.conf'
+  - 'echo "<IfModule mod_dir.c>"  | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
+  - 'echo "	DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm"  | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
+  - 'echo "</IfModule>"  | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
+  - 'echo " "  | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
+  - 'echo "# vim: syntax=apache ts=4 sw=4 sts=4 sr noet" | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
+  - 'sudo mv /tmp/mediawiki-*/* /var/lib/mediawiki'
