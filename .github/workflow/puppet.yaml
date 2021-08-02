@@ -1,1 +1,21 @@
+name: Puppet Deployment
+on:
+  push:
+    branches: [ main ]
 
+jobs:
+  job_one:
+    name: Deploy 
+    runs-on: ubuntu-latest
+    steps:
+    - name: ssh into ec2
+      uses: appleboy/ssh-action@master
+      with:
+        host: 15.206.91.49
+        user: ubuntu
+        key: ${{ secrets.SECRET_KEY }}
+        port: 22
+        script: |
+          git clone https://github.com/rajiv1506/control.git
+          cd control
+          sudo puppet apply ./manifests/site.pp --modulepath modules --hiera_config hiera.yaml
