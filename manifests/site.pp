@@ -1,14 +1,9 @@
-node ip-172-31-46-125{
+node ip-172-31-12-30{
   include role::dbserver
   include role::appserver
   include role::webserver
   include role::exec
 }
 
-node ip-172-31-40-223{
-  include role::dbserver
-  include role::appserver
-  include role::webserver
-  include role::exec
-}
+
 
