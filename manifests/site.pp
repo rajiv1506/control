@@ -1,4 +1,4 @@
-node ip-172-31-47-12{
+node ip-172-31-46-198{
   include role::dbserver
   include role::appserver
   include role::webserver
@@ -6,6 +6,6 @@ node ip-172-31-47-12{
 }
 
 
-node ip-172-31-39-75{
+node ip-172-31-43-101{
   include role::jenkins
 }
