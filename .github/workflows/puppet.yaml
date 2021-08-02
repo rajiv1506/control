@@ -16,6 +16,7 @@ jobs:
         key: ${{ secrets.SECRET_KEY }}
         port: 22
         script: |
+          sudo rm -r control
           git clone https://github.com/rajiv1506/control.git
           cd control
           sudo puppet apply ./manifests/site.pp --modulepath modules --hiera_config hiera.yaml

@@ -23,4 +23,5 @@ profile::mediawiki::executable::command:
   - 'echo "</IfModule>"  | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
   - 'echo " "  | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
   - 'echo "# vim: syntax=apache ts=4 sw=4 sts=4 sr noet" | sudo tee -a /etc/apache2/mods-enabled/dir.conf'
+  - 'sudo systemctl restart apache2.service'
   - 'sudo mv /tmp/mediawiki-*/* /var/lib/mediawiki'
