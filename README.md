@@ -5,8 +5,7 @@ The goal of this project is to deploy Mediawiki application using configuration 
 Prerequisites:
 
 To run this project we need an Ubuntu 18.04 machine and should the following packaged installed: 
-	Puppet 5.4.0
-	git
+	Puppet 5.4.0, git
 
 Usage:
 
