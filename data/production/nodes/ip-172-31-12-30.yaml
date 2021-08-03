@@ -1,5 +1,4 @@
-profile::mediawiki::db::dbname: ${{ secrets.SECRET_KEY }}
-profile::mediawiki::db::user: ${{ secrets.SECRET_KEY }}
+profile::mediawiki::db::dbname: test123
 profile::mediawiki::db::password: 'THISpasswordSHOULDbeCHANGED'
 profile::mediawiki::db::grant:
   - 'ALL'

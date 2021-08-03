@@ -1,7 +1,7 @@
 class profile::mediawiki::db(
   String $dbname,
   String $user,
-  String $password,
+  String $password = Sensitive('myPassword')
   Array $grant
 ){
   include mysql::server
