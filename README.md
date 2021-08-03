@@ -9,7 +9,7 @@ To run this project we need an Ubuntu 18.04 machine and should the following pac
 
 Usage:
 
-Clone the git repo to your local machine. Create a yaml file and edit the site.pp file inside manifest directory and write your node definition over there. Once you made these changed push your code. It will deploy the mediawiki application and it will be accessible on:
+Clone the git repo to your local machine. Create a yaml file (i.e. hostname.yaml ) inside control/data/production/nodes/hostname.yaml and edit the site.pp file inside manifest directory and write your node definition over there. Once you made these changed push your code. It will deploy the mediawiki application and it will be accessible on:
 	http://localhost/wiki
 
 
