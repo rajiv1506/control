@@ -1,4 +1,4 @@
-profile::mediawiki::db::dbname: test123
+profile::mediawiki::db::dbname: 'mediawiki'
 profile::mediawiki::db::password: 'THISpasswordSHOULDbeCHANGED'
 profile::mediawiki::db::grant:
   - 'ALL'
