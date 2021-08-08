@@ -1,4 +1,4 @@
-node ip-172-31-0-5{
+node default{
   include role::dbserver
   include role::appserver
   include role::webserver
